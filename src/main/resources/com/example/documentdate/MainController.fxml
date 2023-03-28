@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #40739e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.documentdate.MainController">
+   <children>
+      <AnchorPane layoutX="19.0" layoutY="133.0" prefHeight="76.0" prefWidth="1253.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="8.0">
+         <children>
+            <Label layoutX="884.0" layoutY="23.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="246.0" text="JORIY VAQT" textFill="WHITE" AnchorPane.rightAnchor="123.0">
+               <font>
+                  <Font name="Century Gothic" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="time" layoutX="1144.0" layoutY="48.0" prefHeight="25.0" prefWidth="83.0" textFill="WHITE" AnchorPane.rightAnchor="26.0">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" layoutX="1143.0" layoutY="21.0" prefHeight="17.0" prefWidth="83.0" textFill="WHITE" AnchorPane.rightAnchor="27.0">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Label>
+            <Line endX="40.0" layoutX="1183.0" layoutY="47.0" startX="-40.0" stroke="WHITE" strokeLineCap="BUTT" strokeWidth="2.0" AnchorPane.rightAnchor="30.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="119.0" prefWidth="1267.0" styleClass="hollow" stylesheets="@efect.css" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="6.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="10.0" prefHeight="99.0" prefWidth="1155.0" text="HUJJATLAR IJROSI NAZORATCHISI" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="115.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Century Gothic" size="70.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="99.0" fitWidth="102.0" focusTraversable="true" layoutX="26.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="26.0">
+               <image>
+                  <Image url="@folder.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="documentView" editable="true" layoutX="7.0" layoutY="287.0" prefHeight="505.0" prefWidth="1267.0" scaleShape="false" styleClass="table-cell" stylesheets="@efect.css" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="287.0">
+        <columns>
+          <TableColumn fx:id="id" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" sortType="DESCENDING" sortable="false" />
+            <TableColumn fx:id="documentTypeColumn" editable="false" prefWidth="75.0" sortable="false" style="-fx-font-size: 13;" text="XUJJAT TURI" />
+          <TableColumn fx:id="nameDocument" minWidth="109.0" prefWidth="75.0" sortType="DESCENDING" sortable="false" style="-fx-aligment: center; -fx-font-size: 13;" text="HUJJAT NOMI" />
+            <TableColumn fx:id="numberDocument" prefWidth="75.0" sortType="DESCENDING" sortable="false" style="-fx-aligment: center; -fx-font-size: 13;" text="RAQAMI" />
+            <TableColumn fx:id="performerDocument" prefWidth="75.0" sortType="DESCENDING" sortable="false" style="-fx-aligment: center; -fx-font-size: 13;" text="EGASI" />
+            <TableColumn fx:id="registrationNumberColumn" minWidth="102.0" prefWidth="75.0" sortable="false" style="-fx-font-size: 13;" text="RO'YHATDAN O'TGAN RAQAMI" />
+            <TableColumn fx:id="documentRegisterData" prefWidth="75.0" sortable="false" style="-fx-font-size: 13;" text="SANASI" />
+            <TableColumn fx:id="dateofexecution" minWidth="72.0" prefWidth="192.0" sortType="DESCENDING" sortable="false" style="-fx-aligment: left; -fx-font-size: 13;" text="QILINADIGAN ISH QISQACHA" />
+            <TableColumn fx:id="lastdateDocument" maxWidth="140.0" minWidth="140.0" prefWidth="28.0" sortType="DESCENDING" sortable="false" style="-fx-aligment: center; -fx-font-size: 13;" text="BAJARILISHI KERAK BOLGAN VAQT" />
+            <TableColumn fx:id="fileDocument" prefWidth="225.0" sortType="DESCENDING" sortable="false" style="-fx-aligment: center; -fx-font-size: 13;" text="HUJJAT JOYLASHGAN JOY" visible="false" />
+            <TableColumn fx:id="status" maxWidth="-1.0" prefWidth="75.0" sortType="DESCENDING" sortable="false" style="-fx-aligment: center; -fx-font-size: 13;" text="HUJJAT XOLATI" visible="false" />
+            <TableColumn fx:id="imagecolumn" maxWidth="140.0" minWidth="133.0" prefWidth="140.0" sortType="DESCENDING" sortable="false" style="-fx-font-size: 13;" text="HOLATI" />
+            <TableColumn fx:id="confirmationDocumentText" prefWidth="75.0" text="confirmationText" visible="false" />
+            <TableColumn fx:id="confirmationDocumentFile" prefWidth="75.0" text="confirmationFile" visible="false" />
+            <TableColumn fx:id="OpenFileDoc" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" sortable="false" style="-fx-font-size: 13;">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@data-storage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TableColumn>
+            <TableColumn fx:id="eyeDoc" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" sortable="false">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@eye.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TableColumn>
+            <TableColumn fx:id="doneDoc" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" sortable="false">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@check.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TableColumn>
+        </columns>
+         <contextMenu>
+            <ContextMenu style="-fx-font-size: 15;">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#DoneDocButton" text="BAJARILGAN">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@thumbs-up.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="BAJARILMAGAN">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@file-settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#inExecution" text="IJRODA">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@file-settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#addbutton" text="QO'SHISH">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#editButton" text="O'ZGARTIRISH">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@edit-info.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#deleteButton" text="O'CHIRISH">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@files-delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </ContextMenu>
+         </contextMenu>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane layoutX="-1.0" layoutY="217.0" prefHeight="58.0" prefWidth="1267.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="6.0">
+         <children>
+            <TextField fx:id="textSearcher" layoutX="3.0" layoutY="18.0" prefHeight="41.0" prefWidth="690.0" promptText="QIDIRISH " AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="574.0">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </TextField>
+            <HBox layoutX="698.0" layoutY="11.0" prefHeight="52.0" prefWidth="572.0" AnchorPane.rightAnchor="-7.0">
+               <children>
+                  <JFXComboBox fx:id="documentTypeId" focusColor="#d8dbe1" onAction="#documentTypeOnAction" prefHeight="44.0" prefWidth="245.0" promptText="XUJJAT TURINI TANLANG" style="-fx-font-size: 18; -fx-text-fill: #c8d6e5;" unFocusColor="#a49191" visibleRowCount="22">
+                     <HBox.margin>
+                        <Insets left="11.0" top="2.0" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <DatePicker prefHeight="40.0" prefWidth="146.0" promptText="SANADAN">
+                     <HBox.margin>
+                        <Insets left="8.0" top="6.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <DatePicker prefHeight="40.0" prefWidth="146.0" promptText="SANASIGACHA">
+                     <HBox.margin>
+                        <Insets left="4.0" top="6.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

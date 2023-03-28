@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addConfirmationPane" prefHeight="415.0" prefWidth="475.0" style="-fx-background-color: #686de0; -fx-border-color: #ffffff; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.documentdate.ConfirmationDockController">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="47.0" prefHeight="51.0" prefWidth="507.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="62.0" layoutY="3.0" prefHeight="49.0" prefWidth="343.0" text="IJRO TA'MINLASHI UCHUN XISOBOT" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="38.0" layoutX="20.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@file.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" defaultButton="true" layoutX="56.0" layoutY="340.0" onAction="#AddConfirmationDocButton" prefHeight="49.0" prefWidth="141.0" style="-fx-background-color: #00cec9;" text="SAQLASH" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" cancelButton="true" layoutX="280.0" layoutY="340.0" onAction="#CancelConfirmationDocButton" prefHeight="49.0" prefWidth="141.0" style="-fx-background-color: #fab1a0;" text="ORQAGA" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="22.0" />
+         </font>
+      </JFXButton>
+      <GridPane alignment="CENTER" layoutX="9.0" layoutY="98.0" prefHeight="177.0" prefWidth="461.0" scaleShape="false">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="118.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="258.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="155.0" minHeight="10.0" prefHeight="104.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="56.0" prefWidth="258.0" GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="ConfirmationTextFile" layoutY="21.0" prefHeight="39.0" prefWidth="220.0" />
+                  <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" defaultButton="true" ellipsisString="" layoutX="221.0" layoutY="21.0" onAction="#DockFileOpenButton" opacity="0.96" prefHeight="38.0" prefWidth="43.0" ripplerFill="#e8bf1e" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@data-storage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <TextArea fx:id="ConfirmationText" prefHeight="70.0" prefWidth="261.0" promptText="Qilingan ish qisqacha tasnifi" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic" size="19.0" />
+               </font>
+            </TextArea>
+            <GridPane prefHeight="86.0" prefWidth="183.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="166.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="17.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="69.0" prefWidth="173.0" text="XUJJAT FAYL MANZILI" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ConfirmationTextFileNoFull" text="*" textFill="#f20909" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="166.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="17.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="XUJJAT BAJARILGANLIGI TASNIFI" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Century Gothic" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ConfirmationTextNoFull" prefHeight="53.0" prefWidth="18.0" text="*" textFill="#f20909" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+      <GridPane layoutX="100.0" layoutY="293.0" prefHeight="30.0" prefWidth="312.0" scaleShape="false">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="18.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="10.0" prefWidth="294.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="ConfirmationAlertIco" contentDisplay="RIGHT" graphicTextGap="11.0" prefHeight="38.0" prefWidth="0.0" text="*" textFill="#f20909">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="ConfirmationAlert" prefHeight="29.0" prefWidth="309.0" text="IKALASIDAN BIRINI TO'LDIRING!" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

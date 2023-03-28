@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addDocPane" prefHeight="676.0" prefWidth="604.0" style="-fx-background-color: #686de0; -fx-border-color: #ffffff; -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.documentdate.EditController">
+   <children>
+      <GridPane alignment="TOP_CENTER" layoutX="14.0" layoutY="142.0" prefHeight="358.0" prefWidth="567.0" scaleShape="false" AnchorPane.bottomAnchor="178.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="140.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="410.0" minWidth="10.0" prefWidth="298.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="364.0" minWidth="10.0" prefWidth="273.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="54.0" minHeight="0.0" prefHeight="54.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="39.0" prefWidth="304.0" text="HUJJAT NOMI" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="22.0" />
+               </font>
+            </Label>
+            <Label prefHeight="51.0" prefWidth="411.0" text="HUJJAT RAQAMI" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic" size="22.0" />
+               </font>
+            </Label>
+            <Label prefHeight="51.0" prefWidth="411.0" text="EGASI" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Century Gothic" size="22.0" />
+               </font>
+            </Label>
+            <Label prefHeight="62.0" prefWidth="296.0" text="QILINADIGAN ISH" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Century Gothic" size="22.0" />
+               </font>
+            </Label>
+            <Label prefHeight="51.0" prefWidth="411.0" text="BAJARILISHI KERAK BOLGAN VAQT" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Century Gothic" size="17.0" />
+               </font>
+            </Label>
+            <Label prefHeight="51.0" prefWidth="411.0" text="HUJJAT JOYLASHGAN JOY" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Century Gothic" size="22.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Button layoutX="238.0" layoutY="6.0" mnemonicParsing="false" onAction="#addFile" prefHeight="32.0" prefWidth="39.0">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@data-storage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <TextField fx:id="editFileDocument" editable="false" layoutX="26.0" layoutY="7.0" prefHeight="32.0" prefWidth="209.0" promptText="/file/file.docx">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font></TextField>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="editNameDocument" layoutX="25.0" layoutY="9.0" prefHeight="32.0" prefWidth="253.0" promptText="AB/123">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font></TextField>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="editNumberDocument" layoutX="25.0" layoutY="7.0" prefHeight="32.0" prefWidth="253.0" promptText="Raqam/Raqam">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font></TextField>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="editPreformerDocument" layoutX="24.0" layoutY="6.0" prefHeight="32.0" prefWidth="253.0" promptText="Boshqarma/Bolinma/Markaz">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane prefHeight="98.0" prefWidth="283.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <TextArea fx:id="editTaskDocument" layoutX="23.0" layoutY="2.0" prefHeight="81.0" prefWidth="253.0" promptText="Vazifa" wrapText="true">
+                     <font>
+                        <Font name="Century Gothic" size="14.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <DatePicker fx:id="editExDocument" editable="false" layoutX="24.0" layoutY="1.0" prefHeight="39.0" prefWidth="175.0" promptText="2022.12.31" showWeekNumbers="true" />
+                  <Label fx:id="statusExDate" layoutX="7.0" layoutY="5.0" prefHeight="32.0" prefWidth="21.0" text="*" textFill="#f20606">
+                     <font>
+                        <Font name="Century Gothic" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <AnchorPane layoutX="33.0" layoutY="59.0" prefHeight="51.0" prefWidth="507.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="19.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="3.0" prefHeight="49.0" prefWidth="304.0" text="O'zgartirish" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="34.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="38.0" layoutX="94.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@edit-info.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="546.0" mnemonicParsing="false" onAction="#editDocButton" prefHeight="43.0" prefWidth="99.0" text="SAQLASH" textAlignment="CENTER" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="349.0">
+         <font>
+            <Font name="Century Gothic" size="19.0" />
+         </font>
+         <padding>
+            <Insets left="1.0" />
+         </padding>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="337.0" layoutY="546.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="43.0" prefWidth="99.0" text="ORQAGA" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic" size="19.0" />
+         </font>
+         <padding>
+            <Insets left="1.0" />
+         </padding>
+      </Button>
+   </children>
+</AnchorPane>

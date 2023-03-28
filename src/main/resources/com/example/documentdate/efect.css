@@ -1,0 +1,173 @@
+.hollow {
+    -fx-background-color: #40739e;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0), 0, 0, 0, 0);
+    -fx-background-radius: 0;
+
+}
+
+.hollow:hover {
+    -fx-background-color: #487eb0;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.7), 20, 0, 0, 0);
+    -fx-background-radius: 0;
+}
+
+.added {
+    -fx-background-color: #00a8ff;
+    -fx-background-insets: 0, 1, 2, 3;
+    -fx-background-radius: 3, 2, 2, 2;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+}
+
+.added:hover {
+    -fx-font-weight: bold;
+    -fx-background-color: #00a8ff;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    -fx-border-color: #f5f6fa;
+    -fx-border-radius: 10;
+    -fx-background-radius: 15;
+}
+.added:pressed {
+    -fx-background-color: #00a8ff;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    -fx-border-color: #f5f6fa;
+    -fx-border-radius: 12;
+    -fx-background-radius: 17;
+}
+.edit {
+    -fx-background-color: #A3CB38;
+    -fx-background-insets: 0, 1, 2, 3;
+    -fx-background-radius: 3, 2, 2, 2;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+}
+
+.edit:hover {
+    -fx-font-weight: bold;
+    -fx-background-color: #C4E538;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    -fx-border-color: #f5f6fa;
+    -fx-border-radius: 10;
+    -fx-background-radius: 15;
+}
+.edit:pressed {
+    -fx-background-color: #A3CB40;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    -fx-border-color: #f5f6fa;
+    -fx-border-radius: 12;
+    -fx-background-radius: 17;
+}
+.delete {
+    -fx-background-color: #9980FA;
+    -fx-background-insets: 0, 1, 2, 3;
+    -fx-background-radius: 3, 2, 2, 2;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+}
+
+.delete:hover {
+    -fx-font-weight: bold;
+    -fx-background-color: #5758BB;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    -fx-border-color: #f5f6fa;
+    -fx-border-radius: 10;
+    -fx-background-radius: 15;
+}
+.delete:pressed {
+    -fx-background-color: #9980FA;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    -fx-border-color: #f5f6fa;
+    -fx-border-radius: 12;
+    -fx-background-radius: 17;
+}
+.settings {
+    -fx-background-color: #F79F1F;
+    -fx-background-insets: 0, 1, 2, 3;
+    -fx-background-radius: 3, 2, 2, 2;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+}
+
+.settings:hover {
+    -fx-font-weight: bold;
+    -fx-background-color: #FFC312;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    -fx-border-color: #f5f6fa;
+    -fx-border-radius: 10;
+    -fx-background-radius: 15;
+}
+.settings:pressed {
+    -fx-background-color:#F79F1F;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+    -fx-border-width: 1;
+    -fx-border-color: #f5f6fa;
+    -fx-border-radius: 12;
+    -fx-background-radius: 17;
+}
+
+
+
+
+.table-row-cell{
+
+    -fx-background-insets: 0.0, 0.0 1.0 0.0 0.0;
+    -fx-padding: 0.0em;
+    -fx-font-size: 17px;
+}
+
+
+.table-row-cell:odd{
+
+    -fx-background-insets: 0.0, 0.0 1.0 0.0 0.0;
+    -fx-padding: 0.0em;
+    -fx-font-weight: bold;
+    -fx-font-size: 17px;
+}
+
+  .table-row-cell:selected {
+      -fx-font-weight: bold;
+      -fx-font-size: 17px;
+  }
+
+.table-row-cell .table-cell{
+    -fx-font-weight: bold;
+    -fx-font-size: 17px;
+  }
+
+.date-picker:editable > .arrow-button > * {
+    -fx-opacity: 0; /* Set the node in the button to be visible */
+}
+
+.date-picker > .arrow-button {
+    -fx-background-image: url("calendar.png"); /* Url of the icon */
+    -fx-background-size: 80% 90%; /* Can be `cover` or `100% 100%` ect. */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center; /* Put the icon in the center */
+}
